@@ -15,7 +15,7 @@
 <div class="header-container">
   <div id="branding">
   <div id="site-title">
-    <i class="fa fa-coffee main-icon"></i>
+  <img src="<?php bloginfo('template_url'); ?>/headphones.svg" width=75 class="main-icon" />
     <?php if ( false ) {} else {echo '<h1>';} ?><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo( 'name' ) ?>" rel="home"><?php bloginfo( 'name' ) ?></a><?php if ( false ) {} else {echo '</h1>';} ?>
   </div>
   <!--<p id="site-description"><?php bloginfo( 'description' ) ?></p>-->

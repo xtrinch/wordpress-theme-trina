@@ -1,9 +1,9 @@
 /*
 Theme Name: wordpress-theme-trina
 Theme URI: http://trina.si/
-Author URI: https://trina.si/
-Version: 1.5
-Tags: black, white, blue, light, two-columns, right-sidebar, fixed-layout, custom-menu, featured-images, microformats, sticky-post, threaded-comments, translation-ready
+Author URI: http://trina.si/
+Version: 0.1
+Tags: black, white, blue, light, two-columns, right-sidebar, fixed-layout, custom-menu, featured-images, microformats, sticky-post, threaded-comments
 License: GNU General Public License
 License URI: https://www.gnu.org/licenses/gpl.html
 */
@@ -160,7 +160,7 @@ body {
 	text-align: center;
 	color: white;
 	font-weight: 400;
-	background-color: #727272;
+	background-color: #8f8f8f;
 }
 
 input, textarea, select, option, input:focus, textarea:focus, select:focus, option:focus {
@@ -178,6 +178,7 @@ select, select:focus, option:focus, option {
 	text-align: center;
 	padding-left: 7px;
 	height: 40px;
+	background: linear-gradient(-180deg, rgb(100,100,100) 30%, rgb(90,90,90) 80%);
 }
 
 input[type=checkbox] {
@@ -211,9 +212,14 @@ header, footer {
 	padding: 0px;
 }
 
+footer {
+	background: linear-gradient(-180deg, rgb(85,85,85) 30%, rgb(100,100,100) 80%);
+	border-top: 1px solid #3f3f3f;
+}
+
 header {
-	border-bottom: 14px solid rgb(85, 85, 85);
-	height: 142px;
+	height: 155px;
+	background: linear-gradient(-180deg, rgb(100,100,100) 30%, rgb(85,85,85) 80%);
 }
 
 .header-container {
@@ -221,7 +227,7 @@ header {
 	max-width: 1350px;
 	margin: 0 auto;
 	padding-right: 50px;
-	padding-left: 50px;
+	padding-left: 35px;
 	margin-top: -35px;
 }
 
@@ -274,6 +280,10 @@ header nav .menu ul li.page_item a {
 header a, header a:visited, header, header h1 {
 	color: white;
 	font-weight: 800;
+}
+
+#wrapper {
+	background-color:rgba(251, 161, 108, 0.1);
 }
 
 #container {
@@ -408,7 +418,8 @@ a.more-link {
 	color: white;
 	border: 1px solid #3f3f3f;
 	font-weight: bold;
-margin-bottom: 20px;
+	margin-bottom: 20px;
+	background: linear-gradient(-180deg, #70d09f 20%, #65BB8F 80%);
 }
 
 a.more-link:hover {
@@ -448,6 +459,7 @@ ul.sid {
 	float:right;
 	color: white;
 	background-color: #70d09f;
+	background: linear-gradient(-180deg, #70d09f 20%, #65BB8F 80%);
 }
 
 #search-inputs input[type=text], #search-inputs input[type=text]:focus {
@@ -462,6 +474,7 @@ ul.sid {
 	margin-bottom: 20px;
 	color: white;
 	outline: none;
+	background: linear-gradient(-180deg, rgb(100,100,100) 20%, rgb(90,90,90) 80%);
 }
 
 #sidebar .widget-title {
@@ -475,6 +488,7 @@ ul.sid {
 	height: 30px;
 	margin-bottom: 5px;
 	border: 1px solid #3f3f3f;
+	background: linear-gradient(-180deg, #B3B194 20%, #aaa888 80%);
 }
 
 #sidebar .widget-container ul, #sidebar .aboutme {
@@ -509,6 +523,7 @@ ul.sid {
 	border-radius: 5px;
 	color: white;
 	border: 1px solid #3f3f3f;
+	background: linear-gradient(-180deg, #70d09f 20%, #65BB8F 80%);
 }
 
 .type-page	 {
@@ -561,6 +576,7 @@ ul.sid {
 	vertical-align:middle;
 	color:#FBA16C;
 	font-size: 45px!important;
+	margin-right: 10px;
 }
 
 #site-title h1 {

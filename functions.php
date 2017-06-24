@@ -218,3 +218,6 @@ add_filter( 'wp_postratings_ratings_image_alt', 'wp_postratings_ratings_image_al
 function wp_postratings_ratings_image_alt( $alt_title_text ) {
 return '';
 }
+
+define(‘ALLOW_UNFILTERED_UPLOADS’, true);
+
