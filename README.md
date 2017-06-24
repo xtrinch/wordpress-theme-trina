@@ -2,4 +2,6 @@
 
 A theme for my personal website http://trina.si
 
-Currently contains a lot of personalized things, is intended to be made into a usable theme, if I ever get around to it.
+![Screenshot](https://github.com/xtrinch/wordpress-theme-trina/blob/master/screenshot.png)
+
+Created out of FactoryReset theme by [StartupWP](https://startupwp.com/).
