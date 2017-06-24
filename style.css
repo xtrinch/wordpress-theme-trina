@@ -181,6 +181,10 @@ select, select:focus, option:focus, option {
 	background: linear-gradient(-180deg, rgb(100,100,100) 30%, rgb(90,90,90) 80%);
 }
 
+option, option:focus {
+	background-color: #3f3f3f;
+}
+
 input[type=checkbox] {
 	width: 17px!important;
 	height: 17px!important;
