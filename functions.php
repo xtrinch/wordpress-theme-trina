@@ -137,7 +137,7 @@ edit_comment_link(__('Edit', 'trina'), ' <span class="meta-sep"> | </span> <span
 
 function trina_read_more_link() {
 	/* translators: s: The post title */
-	return '<a href="' . esc_url( get_permalink( get_the_ID() ) ) . '" class="more-link">' . sprintf( __( 'Continue Reading %s', 'zillah' ), the_title( '<span class="screen-reader-text">"', '"</span>', false ) . ' &nbsp;<i class="fa fa-angle-right"></i>' ) . '</a>';
+	return '<a href="' . esc_url( get_permalink( get_the_ID() ) ) . '" class="more-link">' . sprintf( __( 'Continue Reading %s', 'trina' ), the_title( '<span class="screen-reader-text">"', '"</span>', false ) . ' &nbsp;<i class="fa fa-angle-right"></i>' ) . '</a>';
 }
 add_filter( 'the_content_more_link', 'trina_read_more_link' );
 
@@ -147,22 +147,22 @@ function trina_custom_excerpt_length( $length ) {
 add_filter( 'excerpt_length', 'trina_custom_excerpt_length', 999 );
 
 
-function wpse_allowedtags() {
+function trina_allowedtags() {
     // Add custom tags to this string
         return '<script>,<style>,<br>,<em>,<i>,<ul>,<ol>,<li>,<a>,<p>,<img>,<video>,<audio>,<code>,<ins>'; 
     }
 
-if ( ! function_exists( 'wpse_custom_wp_trim_excerpt' ) ) : 
+if ( ! function_exists( 'trina_custom_wp_trim_excerpt' ) ) : 
 
-    function wpse_custom_wp_trim_excerpt($wpse_excerpt) {
-    $raw_excerpt = $wpse_excerpt;
-        if ( '' == $wpse_excerpt ) {
+    function trina_custom_wp_trim_excerpt($trina_excerpt) {
+    $raw_excerpt = $trina_excerpt;
+        if ( '' == $trina_excerpt ) {
 
-            $wpse_excerpt = get_the_content('');
-            $wpse_excerpt = strip_shortcodes( $wpse_excerpt );
-            $wpse_excerpt = apply_filters('the_content', $wpse_excerpt);
-            $wpse_excerpt = str_replace(']]>', ']]&gt;', $wpse_excerpt);
-            $wpse_excerpt = strip_tags($wpse_excerpt, wpse_allowedtags()); /*IF you need to allow just certain tags. Delete if all tags are allowed */
+            $trina_excerpt = get_the_content('');
+            $trina_excerpt = strip_shortcodes( $trina_excerpt );
+            $trina_excerpt = apply_filters('the_content', $trina_excerpt);
+            $trina_excerpt = str_replace(']]>', ']]&gt;', $trina_excerpt);
+            $trina_excerpt = strip_tags($trina_excerpt, trina_allowedtags()); /*IF you need to allow just certain tags. Delete if all tags are allowed */
 
             //Set the excerpt word count and only break after sentence is complete.
                 $excerpt_word_count = 70;
@@ -172,7 +172,7 @@ if ( ! function_exists( 'wpse_custom_wp_trim_excerpt' ) ) :
                 $count = 0;
 
                 // Divide the string into tokens; HTML tags, or words, followed by any whitespace
-                preg_match_all('/(<[^>]+>|[^<>\s]+)\s*/u', $wpse_excerpt, $tokens);
+                preg_match_all('/(<[^>]+>|[^<>\s]+)\s*/u', $trina_excerpt, $tokens);
 
                 foreach ($tokens[0] as $token) { 
 
@@ -189,29 +189,29 @@ if ( ! function_exists( 'wpse_custom_wp_trim_excerpt' ) ) :
                     $excerptOutput .= $token;
                 }
 
-            $wpse_excerpt = trim(force_balance_tags($excerptOutput));
+            $trina_excerpt = trim(force_balance_tags($excerptOutput));
 
-                $excerpt_end = ' <a href="'. esc_url( get_permalink() ) . '">' . '&nbsp;&raquo;&nbsp;' . sprintf(__( 'Read more about: %s &nbsp;&raquo;', 'wpse' ), get_the_title()) . '</a>'; 
+                $excerpt_end = ' <a href="'. esc_url( get_permalink() ) . '">' . '&nbsp;&raquo;&nbsp;' . sprintf(__( 'Read more about: %s &nbsp;&raquo;', 'trina' ), get_the_title()) . '</a>'; 
                 $excerpt_more = apply_filters('excerpt_more', ' ' . $excerpt_end); 
 
-                //$pos = strrpos($wpse_excerpt, '</');
+                //$pos = strrpos($trina_excerpt, '</');
                 //if ($pos !== false)
                 // Inside last HTML tag
-                //$wpse_excerpt = substr_replace($wpse_excerpt, $excerpt_end, $pos, 0); /* Add read more next to last word */
+                //$trina_excerpt = substr_replace($trina_excerpt, $excerpt_end, $pos, 0); /* Add read more next to last word */
                 //else
                 // After the content
-                // $wpse_excerpt .= $excerpt_more; /*Add read more in new paragraph */
+                // $trina_excerpt .= $excerpt_more; /*Add read more in new paragraph */
 
-            return $wpse_excerpt;   
+            return $trina_excerpt;   
 
         }
-        return apply_filters('wpse_custom_wp_trim_excerpt', $wpse_excerpt, $raw_excerpt);
+        return apply_filters('trina_custom_wp_trim_excerpt', $trina_excerpt, $raw_excerpt);
     }
 
 endif; 
 
 remove_filter('get_the_excerpt', 'wp_trim_excerpt');
-add_filter('get_the_excerpt', 'wpse_custom_wp_trim_excerpt'); 
+add_filter('get_the_excerpt', 'trina_custom_wp_trim_excerpt'); 
 
 add_filter( 'wp_postratings_ratings_image_alt', 'wp_postratings_ratings_image_alt' );
 function wp_postratings_ratings_image_alt( $alt_title_text ) {
