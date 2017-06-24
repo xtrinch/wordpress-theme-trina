@@ -1,6 +1,6 @@
 <?php global $post; if ( 'post' == $post->post_type ) : ?>
 <div class="entry-footer">
-  <?php echo theas_read_more_link() ?>
+  <?php echo trina_read_more_link() ?>
 
   <?php
   if ( is_category() && $catz = factoryreset_catz(', ') ) : // ?>
