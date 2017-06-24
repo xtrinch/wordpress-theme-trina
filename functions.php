@@ -2,6 +2,7 @@
 add_action('after_setup_theme', 'factoryreset_setup');
 function factoryreset_setup(){
 load_theme_textdomain('factoryreset', get_template_directory() . '/languages');
+add_theme_support( 'title-tag' );
 add_theme_support( 'automatic-feed-links' );
 add_theme_support( 'post-thumbnails' );
 global $content_width;
@@ -87,11 +88,7 @@ return trim(join( $glue, $tags ));
 }
 function factoryreset_commenter_link() {
 $commenter = get_comment_author_link();
-//if ( ereg( '<a[^>]* class=[^>]+>', $commenter ) ) {
-//$commenter = preg_replace( '/(<a[^>]* class=[\'"]?)/', '\\1url ' , $commenter );
-//} else {
 $commenter = preg_replace( '/(<a )/', '\\1class="url "' , $commenter );
-//}
 $avatar_email = get_comment_author_email();
 $avatar = str_replace( "class='avatar", "class='photo avatar", get_avatar( $avatar_email, 80 ) );
 echo $avatar . ' <span class="fn n">' . $commenter . '</span>';
@@ -136,16 +133,16 @@ edit_comment_link(__('Edit', 'factoryreset'), ' <span class="meta-sep"> | </span
 <?php }
 
 
-function theas_read_more_link() {
+function trina_read_more_link() {
 	/* translators: s: The post title */
 	return '<a href="' . esc_url( get_permalink( get_the_ID() ) ) . '" class="more-link">' . sprintf( __( 'Continue Reading %s', 'zillah' ), the_title( '<span class="screen-reader-text">"', '"</span>', false ) . ' &nbsp;<i class="fa fa-angle-right"></i>' ) . '</a>';
 }
-add_filter( 'the_content_more_link', 'theas_read_more_link' );
+add_filter( 'the_content_more_link', 'trina_read_more_link' );
 
-function wpdocs_custom_excerpt_length( $length ) {
+function trina_custom_excerpt_length( $length ) {
     return 70;
 }
-add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+add_filter( 'excerpt_length', 'trina_custom_excerpt_length', 999 );
 
 
 function wpse_allowedtags() {
