@@ -4,6 +4,7 @@ function factoryreset_setup(){
 load_theme_textdomain('factoryreset', get_template_directory() . '/languages');
 add_theme_support( 'title-tag' );
 add_theme_support( 'custom-header', $args );
+add_theme_support( 'custom-background', $args );
 add_theme_support( 'automatic-feed-links' );
 add_theme_support( 'post-thumbnails' );
 global $content_width;
