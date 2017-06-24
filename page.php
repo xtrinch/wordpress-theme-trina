@@ -10,8 +10,8 @@ the_post_thumbnail();
 }
 ?>
 <?php the_content(); ?>
-<?php wp_link_pages('before=<div class="page-link">' . __( 'Pages:', 'factoryreset' ) . '&after=</div>') ?>
-<?php edit_post_link( __( 'Edit', 'factoryreset' ), '<div class="edit-link">', '</div>' ) ?>
+<?php wp_link_pages('before=<div class="page-link">' . __( 'Pages:', 'trina' ) . '&after=</div>') ?>
+<?php edit_post_link( __( 'Edit', 'trina' ), '<div class="edit-link">', '</div>' ) ?>
 </div>
 </div>
 <?php comments_template( '', true ); ?>

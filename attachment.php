@@ -2,13 +2,13 @@
 <?php global $post; ?>
 <div id="content">
 <?php the_post(); ?>
-<h1 class="page-title"><?php the_title(); ?> | <a href="<?php echo get_permalink($post->post_parent) ?>" title="<?php printf( __( 'Return to %s', 'factoryreset' ), esc_html( get_the_title($post->post_parent), 1 ) ) ?>" rev="attachment"><span class="meta-nav">&laquo; </span><?php echo get_the_title($post->post_parent) ?></a></h1>
+<h1 class="page-title"><?php the_title(); ?> | <a href="<?php echo get_permalink($post->post_parent) ?>" title="<?php printf( __( 'Return to %s', 'trina' ), esc_html( get_the_title($post->post_parent), 1 ) ) ?>" rev="attachment"><span class="meta-nav">&laquo; </span><?php echo get_the_title($post->post_parent) ?></a></h1>
 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 <?php get_template_part( 'entry', 'meta' ); ?>
 <div class="entry-content">
 <div id="nav-above" class="navigation">
-<div class="nav-previous"><?php previous_image_link( false, sprintf(__( ' %s Previous' , 'factoryreset' ), '&larr;' ) ); ?></div>
-<div class="nav-next"><?php next_image_link( false, sprintf(__( 'Next %s' , 'factoryreset' ), '&rarr;' ) ); ?></div>
+<div class="nav-previous"><?php previous_image_link( false, sprintf(__( ' %s Previous' , 'trina' ), '&larr;' ) ); ?></div>
+<div class="nav-next"><?php next_image_link( false, sprintf(__( 'Next %s' , 'trina' ), '&rarr;' ) ); ?></div>
 </div>
 <div class="entry-attachment">
 <?php if ( wp_attachment_is_image( $post->ID ) ) : $att_image = wp_get_attachment_image_src( $post->ID, "large"); ?>
@@ -25,7 +25,7 @@ the_post_thumbnail();
 ?>
 </div>
 <div class="entry-footer">
-<?php edit_post_link( __( 'Edit', 'factoryreset' ), "\n\t\t\t\t\t<span class=\"edit-link\">", "</span>" ) ?>
+<?php edit_post_link( __( 'Edit', 'trina' ), "\n\t\t\t\t\t<span class=\"edit-link\">", "</span>" ) ?>
 </div>
 </div>
 <?php comments_template(); ?>

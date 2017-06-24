@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <div id="content">
 <?php the_post(); ?>
-<h1 class="page-title"><?php _e( 'Tag Archives:', 'factoryreset' ) ?> <span><?php single_tag_title() ?></span></h1>
+<h1 class="page-title"><?php _e( 'Tag Archives:', 'trina' ) ?> <span><?php single_tag_title() ?></span></h1>
 <?php rewind_posts(); ?>
 <?php get_template_part( 'nav', 'above' ); ?>
 <?php while ( have_posts() ) : the_post(); ?>

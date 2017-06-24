@@ -4,7 +4,7 @@ die ( 'Please do not load this page directly.' );
 if ( post_password_required() ) :
 ?>
 <div id="comments">
-<div class="nopassword"><?php _e('This post is password protected. Enter the password to view comments.', 'factoryreset') ?></div>
+<div class="nopassword"><?php _e('This post is password protected. Enter the password to view comments.', 'trina') ?></div>
 </div>
 <?php
 return;
@@ -19,14 +19,14 @@ get_comment_type() == "comment" ? ++$comment_count : ++$ping_count;
 ?>
 <?php if ( ! empty($comments_by_type['comment']) ) : ?>
 <div id="comments-list" class="comments">
-<h3><?php echo ($comment_count > 1 ? '<span>'.$comment_count.'</span> '. __('Comments', 'factoryreset') : '<span>'. __( 'One', 'factoryreset' ) .'</span> '. __('Comment', 'factoryreset') ); ?></h3>
+<h3><?php echo ($comment_count > 1 ? '<span>'.$comment_count.'</span> '. __('Comments', 'trina') : '<span>'. __( 'One', 'trina' ) .'</span> '. __('Comment', 'trina') ); ?></h3>
 <?php $total_pages = get_comment_pages_count(); if ( $total_pages > 1 ) : ?>
 <div id="comments-nav-above" class="comments-navigation">
 <div class="paginated-comments-links"><?php paginate_comments_links(); ?></div>
 </div>
 <?php endif; ?>
 <ul>
-<?php wp_list_comments('type=comment&callback=factoryreset_custom_comments'); ?>
+<?php wp_list_comments('type=comment&callback=trina_custom_comments'); ?>
 </ul>
 <?php $total_pages = get_comment_pages_count(); if ( $total_pages > 1 ) : ?>
 <div id="comments-nav-below" class="comments-navigation">
@@ -40,9 +40,9 @@ global $comments_by_type;
 $comments_by_type = &separate_comments( $comments );
 if ( ! empty($comments_by_type['pings']) ) : ?>
 <div id="trackbacks-list" class="comments">
-<h3><?php echo($ping_count > 1 ? '<span>'.$ping_count.'</span> '.__('Trackbacks', 'factoryreset') : '<span>'. __('One', 'factoryreset' ) .'</span> '. __('Trackback', 'factoryreset') ); ?></h3>
+<h3><?php echo($ping_count > 1 ? '<span>'.$ping_count.'</span> '.__('Trackbacks', 'trina') : '<span>'. __('One', 'trina' ) .'</span> '. __('Trackback', 'trina') ); ?></h3>
 <ul>
-<?php wp_list_comments('type=pings&callback=factoryreset_custom_pings'); ?>
+<?php wp_list_comments('type=pings&callback=trina_custom_pings'); ?>
 </ul>
 </div>
 <?php endif; ?>

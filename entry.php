@@ -7,7 +7,7 @@ if ( is_singular() ) {
   echo '<h2 class="entry-title entry-title-excerpt">';
 } ?>
 
-<a href="<?php the_permalink(); ?>" title="<?php printf( __('Read %s', 'factoryreset'), the_title_attribute('echo=0') ); ?>" rel="bookmark"><?php the_title(); ?></a><?php if ( is_singular() ) {echo '</h1>';} else {echo '</h2>';} ?>
+<a href="<?php the_permalink(); ?>" title="<?php printf( __('Read %s', 'trina'), the_title_attribute('echo=0') ); ?>" rel="bookmark"><?php the_title(); ?></a><?php if ( is_singular() ) {echo '</h1>';} else {echo '</h2>';} ?>
 
 <?php get_template_part( 'entry', 'meta' ); ?>
 </div>

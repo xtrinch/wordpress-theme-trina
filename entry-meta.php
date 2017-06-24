@@ -1,11 +1,11 @@
 <?php global $authordata; ?>
 <div class="entry-meta entry-meta-excerpt">
   <div>
-    <span class="comments-link"><?php comments_number(__( '0', 'factoryreset' ), __( '1', 'factoryreset' ), __( '%', 'factoryreset' )) ?></span>
+    <span class="comments-link"><?php comments_number(__( '0', 'trina' ), __( '1', 'trina' ), __( '%', 'trina' )) ?></span>
     <i class="fa fa-comments-o"></i>
   </div>
 <div>
-<span class="author vcard"><a class="url fn n" href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>" title="<?php printf( __( 'View all articles by %s', 'factoryreset' ), $authordata->display_name ); ?>"><?php the_author(); ?></a></span>
+<span class="author vcard"><a class="url fn n" href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>" title="<?php printf( __( 'View all articles by %s', 'trina' ), $authordata->display_name ); ?>"><?php the_author(); ?></a></span>
 <i class="fa fa-user-circle"></i><br />
 </div>
 <div>
