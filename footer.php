@@ -3,7 +3,7 @@
 <footer>
 <div id="copyright">
 	<div>
-		<?php echo sprintf( __( '%1$s %2$s %3$s. All Rights Reserved.', 'trina' ), '&copy;', date_i18n(__('Y','textdomain')), esc_html(get_bloginfo('name')) ); ?>
+		<?php echo sprintf( __( '%1$s %2$s %3$s. All Rights Reserved.', 'trina' ), '&copy;', date_i18n(__('Y','trina')), esc_html(get_bloginfo('name')) ); ?>
 	</div>
 	<div>
 		<?php
@@ -18,7 +18,7 @@
 		<?php
 		/* translators: 1: Link to trina.si */
 		printf( __( 'Theme by %1$s', 'trina' ),
-			/* translators: s: 'Themeisle' */
+			/* translators: s: 'Trina' */
 			sprintf( '<a href="http://trina.si/" rel="nofollow">%s</a>', esc_html__( 'Trina', 'trina' ) )
 		);
 		?>

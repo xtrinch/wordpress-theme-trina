@@ -2,7 +2,7 @@
 <?php global $post; ?>
 <div id="content">
 <?php the_post(); ?>
-<h1 class="page-title"><?php the_title(); ?> | <a href="<?php echo get_permalink($post->post_parent) ?>" title="<?php printf( __( 'Return to %s', 'trina' ), esc_html( get_the_title($post->post_parent), 1 ) ) ?>" rev="attachment"><span class="meta-nav">&laquo; </span><?php echo get_the_title($post->post_parent) ?></a></h1>
+<h1 class="page-title"><?php the_title(); ?> | <a href="<?php echo esc_url (get_permalink($post->post_parent)) ?>" title="<?php printf( __( 'Return to %s', 'trina' ), esc_html( get_the_title($post->post_parent), 1 ) ) ?>" rev="attachment"><span class="meta-nav">&laquo; </span><?php echo get_the_title($post->post_parent) ?></a></h1>
 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 <?php get_template_part( 'entry', 'meta' ); ?>
 <div class="entry-content">
@@ -18,10 +18,10 @@
 <?php endif; ?>
 </div>
 <div class="entry-caption"><?php if ( !empty($post->post_excerpt) ) the_excerpt() ?></div>
-<?php 
+<?php
 if ( has_post_thumbnail() ) {
 the_post_thumbnail();
-} 
+}
 ?>
 </div>
 <div class="entry-footer">

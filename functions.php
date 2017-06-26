@@ -1,4 +1,5 @@
 <?php
+
 add_action('after_setup_theme', 'trina_setup');
 function trina_setup(){
 	load_theme_textdomain('trina', get_template_directory() . '/languages');
@@ -13,6 +14,14 @@ function trina_setup(){
 	array( 'main-menu' => __( 'Main Menu', 'trina' ) )
 	);
 }
+
+/**
+ * Registers an editor stylesheet for the theme.
+ */
+function wpdocs_theme_add_editor_styles() {
+    add_editor_style( 'custom-editor-style.css' );
+}
+add_action( 'admin_init', 'wpdocs_theme_add_editor_styles' );
 
 function trina_scripts() {
 	wp_enqueue_style( 'trina-style', get_stylesheet_uri(), array( ) );
