@@ -12,28 +12,28 @@ License URI: https://www.gnu.org/licenses/gpl.html
 */
 
 @font-face {
-	font-family: Muli; src: url('assets/fonts/Muli-Regular.ttf');
+	font-family: Muli; src: url('fonts/Muli-Regular.ttf');
 	font-weight: 400;
 }
 
 @font-face {
-	font-family: Muli; src: url('assets/fonts/Muli-Light.ttf');
+	font-family: Muli; src: url('fonts/Muli-Light.ttf');
 	font-weight: 100;
 }
 
 @font-face {
-	font-family: Quicksand; src: url('assets/fonts/Quicksand-Bold.ttf');
+	font-family: Quicksand; src: url('fonts/Quicksand-Bold.ttf');
 	font-weight: 800;
 }
 
 @font-face {
-	font-family: Quicksand; src: url('assets/fonts/Quicksand-Regular.ttf');
+	font-family: Quicksand; src: url('fonts/Quicksand-Regular.ttf');
 	font-weight: 400;
 }
 
 
 @font-face {
-	font-family: Quicksand; src: url('assets/fonts/Quicksand-Light.ttf');
+	font-family: Quicksand; src: url('fonts/Quicksand-Light.ttf');
 	font-weight: 300;
 }
 
