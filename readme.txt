@@ -18,3 +18,7 @@ Trina is distributed under the terms of the GNU GPL
 * The Font Awesome font is licensed under the SIL Open Font License – http://scripts.sil.org/OFL.
 * Font Awesome CSS, LESS, and SASS files are licensed under the MIT License – http://opensource.org/licenses/mit-license.html.
 * The Font Awesome pictograms are licensed under the CC BY 3.0 License – http://creativecommons.org/licenses/by/3.0/
+
+= Factory reset =
+
+* Factory reset theme by StartupWP is licensed under the GNU GPL - https://startupwp.com/
