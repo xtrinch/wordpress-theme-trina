@@ -259,16 +259,6 @@ function trina_custom_wp_trim_excerpt($trina_excerpt) {
 
 add_filter('get_the_excerpt', 'trina_custom_wp_trim_excerpt');
 
-function twentyseventeen_excerpt_more() {
-	$link = sprintf( '<p class="link-more"><a href="%1$s" class="more-link">%2$s</a></p>',
-		esc_url( get_permalink( get_the_ID() ) ),
-		/* translators: %s: Name of current post */
-		sprintf( __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen' ), get_the_title( get_the_ID() ) )
-	);
-	return ' &hellip; ' . $link;
-}
-//add_filter( 'excerpt_more', 'twentyseventeen_excerpt_more' );
-
 add_filter( 'wp_postratings_ratings_image_alt', 'wp_postratings_ratings_image_alt' );
 function wp_postratings_ratings_image_alt( $alt_title_text ) {
 	return '';
