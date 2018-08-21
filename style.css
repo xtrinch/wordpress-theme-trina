@@ -125,6 +125,11 @@ input, textarea, select, option, input:focus, textarea:focus, select:focus, opti
 	background-color: #3f3f3f;
 }
 
+.comment-content p {
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+}
+
 select, select:focus, option:focus, option {
 	text-align: center;
 	padding-left: 7px;
@@ -189,14 +194,24 @@ header {
 header #branding {
 	display: inline-block;
 	height: 100%;
-	width: 49%;
+	width: 69%;
+    overflow: hidden;
+}
+
+#site-title {
+	height: 100%;
+}
+
+#site-title h1 {
+	max-width: calc(100% - 98px);
+    max-height: 100%;
 }
 
 header nav {
 	display: inline-block;
 	height: 100%;
 	vertical-align: top;
-	width: 49%;
+	width: 30%;
 }
 
 header nav .menu {
@@ -286,6 +301,9 @@ header:after {
 	text-decoration: underline;
 	text-decoration-skip: ink;
 	text-decoration-color: silver;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+    display: block;
 }
 
 .post h2 a:hover, .post h1 a:hover {
@@ -375,6 +393,7 @@ a.more-link {
 	font-weight: bold;
 	margin-bottom: 20px;
 	background: linear-gradient(-180deg, #70d09f 20%, #65BB8F 80%);
+	clear: none;
 }
 
 a.more-link:hover {
@@ -441,7 +460,7 @@ ul.sid {
 	color: white;
 	line-height: 40px;
 	height: 30px;
-	margin-bottom: 5px;
+	margin-bottom: 10px;
 	border: 1px solid #3f3f3f;
 	background: linear-gradient(-180deg, #B3B194 20%, #aaa888 80%);
 }
@@ -622,4 +641,44 @@ code {
 #commentform input[type=text] {
 	width: calc(100% - 10px);
 	background-color: rgb(85, 85, 85);
+}
+
+.widget_recent_comments li {
+	padding: 5px;
+}
+
+.widget_archive li {
+	padding: 5px;
+}
+
+.widget_archive li a {
+	color: lightgrey;
+}
+
+.entry-content #jp-relatedposts h3.jp-relatedposts-headline, 
+div.sharedaddy h3.sd-title,
+#jp-relatedposts h3.jp-relatedposts-headline em {
+	line-height: 15px!important;
+	padding-bottom: 0px;
+	font-size: 22px!important;
+	color: #9a9a9a!important;
+	font-weight: normal!important;
+}
+
+#jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title a {
+	font-weight: bold!important;
+}
+
+.entry-content table tr td {
+   padding: 10px;
+   border-right: 1px solid grey;
+}
+
+.entry-content table tr {
+   border-bottom: 1px solid grey;
+}
+
+.entry-content table {
+   border-top: 1px solid grey;
+   border-left: 1px solid grey;
 }

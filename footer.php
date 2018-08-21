@@ -19,7 +19,7 @@
 		/* translators: 1: Link to trina.si */
 		printf( __( 'Theme by %1$s', 'trina' ),
 			/* translators: s: 'Trina' */
-			sprintf( '<a href="http://trina.si/" rel="nofollow">%s</a>', esc_html__( 'Trina', 'trina' ) )
+			sprintf( '<a href="https://github.com/xtrinch/wordpress-theme-trina" rel="nofollow">%s</a>', esc_html__( 'Trina', 'trina' ) )
 		);
 		?>
 	</div>

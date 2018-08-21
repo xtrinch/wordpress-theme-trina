@@ -4,7 +4,23 @@ add_action('after_setup_theme', 'trina_setup');
 function trina_setup(){
 	load_theme_textdomain('trina', get_template_directory() . '/languages');
 	add_theme_support( 'title-tag' );
-	add_theme_support( 'custom-header' );
+	
+	$default_args = array(
+    	'default-image'          => '',
+    	'random-default'         => false,
+    	'width'                  => 75,
+    	'height'                 => 75,
+    	'flex-height'            => false,
+    	'flex-width'             => false,
+    	'default-text-color'     => '',
+    	'header-text'            => true,
+    	'uploads'                => true,
+    	'wp-head-callback'       => '',
+    	'admin-head-callback'    => '',
+    	'admin-preview-callback' => '',
+	);
+
+	add_theme_support( 'custom-header', $default_args );
 	add_theme_support( 'custom-background' );
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'post-thumbnails' );
@@ -257,7 +273,7 @@ function trina_custom_wp_trim_excerpt($trina_excerpt) {
     return $trina_excerpt;
 }
 
-add_filter('get_the_excerpt', 'trina_custom_wp_trim_excerpt');
+//add_filter('get_the_excerpt', 'trina_custom_wp_trim_excerpt');
 
 add_filter( 'wp_postratings_ratings_image_alt', 'wp_postratings_ratings_image_alt' );
 function wp_postratings_ratings_image_alt( $alt_title_text ) {

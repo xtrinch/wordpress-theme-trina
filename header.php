@@ -12,8 +12,15 @@
 		<div class="header-container">
 		  <div id="branding">
 		  <div id="site-title">
-		  <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/headphones.svg" width=75 class="main-icon" />
-		    <?php if ( false ) {} else {echo '<h1>';} ?><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo( 'name' ) ?>" rel="home"><?php bloginfo( 'name' ) ?></a><?php if ( false ) {} else {echo '</h1>';} ?>
+		  <img src="<?php header_image(); ?>" width=75 class="main-icon" />
+		    <?php if ( false ) {} else {echo '<h1>';} ?>
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo( 'name' ) ?>" rel="home">
+				<?php if (display_header_text()==true){ ?>
+					<?php bloginfo( 'name' ) ?>
+				<?php } else { ?>
+					&nbsp;
+				<?php } ?>
+			</a><?php if ( false ) {} else {echo '</h1>';} ?>
 		  </div>
 		  <!--<p id="site-description"><?php bloginfo( 'description' ) ?></p>-->
 		  </div>
