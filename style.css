@@ -4,7 +4,7 @@ Author: Mojca Rojko
 Author URI: http://trina.si/
 Theme URI: https://github.com/xtrinch/wordpress-theme-trina
 Text Domain: trina
-Version: 0.3
+Version: 0.5
 Description: Simple dark theme
 Tags: two-columns, right-sidebar, custom-menu, threaded-comments
 License: GNU General Public License
@@ -681,4 +681,26 @@ div.sharedaddy h3.sd-title,
 .entry-content table {
    border-top: 1px solid grey;
    border-left: 1px solid grey;
+}
+
+
+/**** MEDIA ****/
+
+@media (max-width: 1000px) {
+	#sidebar {
+		float: none;
+		width: auto;
+		padding: 40px;
+	}
+
+	#content {
+		width: 100%;
+	}
+}
+
+@media (max-width: 550px) {
+	.post h2 a, .post h2 a:visited, .post h1 a, .post h1 a:visited {
+		font-size: 29px;
+		line-height: 35px;
+	}
 }
